@@ -1,0 +1,123 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0f172a;
+    color: white;
+    margin: 0;
+}
+
+/* CHAT */
+#chat {
+    height: 80vh;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MENSAJES */
+.msg-user, .msg-ai {
+    display: inline-block;
+    max-width: 70%;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 14px;
+    word-wrap: break-word;
+}
+
+.msg-user {
+    background: #2563eb;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.msg-ai {
+    background: #1e293b;
+    align-self: flex-start;
+}
+
+/* INPUT BAR estilo iPhone */
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+/* más delgado y equilibrado con botón */
+#input {
+    flex: 1;
+    height: 38px;
+    resize: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+/* botón perfectamente alineado */
+#sendBtn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TEXTAREA */
+#input {
+    flex: 1;
+    resize: none;
+    max-height: 120px;
+    min-height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    overflow-y: auto;
+}
+
+/* BOTÓN FLECHA */
+#sendBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@keyframes messageIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.msg-user, .msg-ai {
+    animation: messageIn 0.25s ease-out;
+}

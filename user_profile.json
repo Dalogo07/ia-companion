@@ -1,0 +1,6 @@
+{
+  "nombre": "Usuario",
+  "edad": 19,
+  "intereses": ["gym", "IA", "videojuegos"],
+  "objetivos": ["crear asistente IA", "mejorar físico"]
+}
